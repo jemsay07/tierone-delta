@@ -624,7 +624,6 @@ class tierone_banner_promo_ads extends WP_Widget{
 		$alt1 				= isset( $instance['alt1'] ) ? $instance['alt1'] : '';
 		$ads_image_path1 	= isset( $instance['ads_image'] ) ? $instance['ads_image'] : '';
 		$ads_link1 			= isset( $instance['ads_link1'] ) ? $instance['ads_link1'] : '';
-		$ads_link_type1 	= isset( $instance['ads_link_type1'] ) ? $instance['ads_link_type1'] : '';
 		$ads_target1 		= isset( $instance['ads_target1'] ) ? $instance['ads_target1'] : '';
 
 		/*bpa 2*/
@@ -632,7 +631,6 @@ class tierone_banner_promo_ads extends WP_Widget{
 		$alt2				= isset( $instance['alt2'] ) ? $instance['alt2'] : '';
 		$ads_image_path2 	= isset( $instance['ads_image2'] ) ? $instance['ads_image2'] : '';
 		$ads_link2 			= isset( $instance['ads_link2'] ) ? $instance['ads_link2'] : '';
-		$ads_link_type2 	= isset( $instance['ads_link_type2'] ) ? $instance['ads_link_type2'] : '';
 		$ads_target2 		= isset( $instance['ads_target2'] ) ? $instance['ads_target2'] : '';
 
 		/*bpa 3*/
@@ -640,7 +638,6 @@ class tierone_banner_promo_ads extends WP_Widget{
 		$alt3				= isset( $instance['alt3'] ) ? $instance['alt3'] : '';
 		$ads_image_path3 	= isset( $instance['ads_image3'] ) ? $instance['ads_image3'] : '';
 		$ads_link3			= isset( $instance['ads_link3'] ) ? $instance['ads_link3'] : '';
-		$ads_link_type3 	= isset( $instance['ads_link_type3'] ) ? $instance['ads_link_type3'] : '';
 		$ads_target3 		= isset( $instance['ads_target3'] ) ? $instance['ads_target3'] : '';
 
 		/*bpa 4*/
@@ -648,7 +645,6 @@ class tierone_banner_promo_ads extends WP_Widget{
 		$alt4				= isset( $instance['alt4'] ) ? $instance['alt4'] : '';
 		$ads_image_path4 	= isset( $instance['ads_image4'] ) ? $instance['ads_image4'] : '';
 		$ads_link4			= isset( $instance['ads_link4'] ) ? $instance['ads_link4'] : '';
-		$ads_link_type4 	= isset( $instance['ads_link_type4'] ) ? $instance['ads_link_type4'] : '';
 		$ads_target4 		= isset( $instance['ads_target4'] ) ? $instance['ads_target4'] : '';
 
 		if( empty( $title1 ) ){
@@ -662,12 +658,6 @@ class tierone_banner_promo_ads extends WP_Widget{
 		if ( empty( $ads_link1 ) ) {
 			$ads_link1 = esc_url(home_url('/'));
 		};
-
-		if ( $ads_link_type1 == "nofollow") {
-			$ads_link_type1 = "nofollow";
-		}else{
-			$ads_link_type1 = "dofollow";
-		}
 
 		if ( $ads_target1 == '_blank' ) {
 			$ads_target1 = '_blank';
@@ -686,12 +676,6 @@ class tierone_banner_promo_ads extends WP_Widget{
 		if ( empty( $ads_link2 ) ) {
 			$ads_link2 = esc_url(home_url('/'));
 		};
-
-		if ( $ads_link_type2 == "nofollow") {
-			$ads_link_type2 = "nofollow";
-		}else{
-			$ads_link_type2 = "dofollow";
-		}
 
 		if ( $ads_target2 == '_blank' ) {
 			$ads_target2 = '_blank';
@@ -712,12 +696,6 @@ class tierone_banner_promo_ads extends WP_Widget{
 			$ads_link3 = esc_url(home_url('/'));
 		};
 
-		if ( $ads_link_type3 == "nofollow") {
-			$ads_link_type3 = "nofollow";
-		}else{
-			$ads_link_type3 = "dofollow";
-		}
-
 		if ( $ads_target3 == '_blank' ) {
 			$ads_target3 = '_blank';
 		}else{
@@ -737,12 +715,6 @@ class tierone_banner_promo_ads extends WP_Widget{
 			$ads_link4 = esc_url(home_url('/'));
 		};
 
-		if ( $ads_link_type4 == "nofollow") {
-			$ads_link_type4 = "nofollow";
-		}else{
-			$ads_link_type4 = "dofollow";
-		}
-
 		if ( $ads_target4 == '_blank' ) {
 			$ads_target4 = '_blank';
 		}else{
@@ -751,22 +723,22 @@ class tierone_banner_promo_ads extends WP_Widget{
 		?>
 		<div class="delta-site-bpa-ads">
 			<div class="delta-site-bpa-box">
-				<a href="<?php echo esc_url( $ads_link1 ); ?>" rel="<?php echo esc_attr( $ads_link_type1 ); ?>" target="<?php echo esc_attr( $ads_target1 ); ?>" >
+				<a href="<?php echo esc_url( $ads_link4 ); ?>" target="<?php echo esc_attr( $ads_target1 ); ?>" >
 					<img src="<?php echo esc_url( $ads_image_path1 ); ?>" title="<?php echo esc_attr( $title1 ); ?>" alt="<?php echo esc_attr( $alt1 ); ?>">
 				</a>
 			</div>
 			<div class="delta-site-bpa-box">
-				<a href="<?php echo esc_url( $ads_link2 ); ?>" rel="<?php echo esc_attr( $ads_link_type2 ); ?>" target="<?php echo esc_attr( $ads_target2 ); ?>" >
+				<a href="<?php echo esc_url( $ads_link4 ); ?>" target="<?php echo esc_attr( $ads_target2 ); ?>" >
 					<img src="<?php echo esc_url( $ads_image_path2 ); ?>" title="<?php echo esc_attr( $title2 ); ?>" alt="<?php echo esc_attr( $alt2 ); ?>">
 				</a>
 			</div>
 			<div class="delta-site-bpa-box">
-				<a href="<?php echo esc_url( $ads_link3 ); ?>" rel="<?php echo esc_attr( $ads_link_type3 ); ?>" target="<?php echo esc_attr( $ads_target3 ); ?>" >
+				<a href="<?php echo esc_url( $ads_link4 ); ?>" target="<?php echo esc_attr( $ads_target3 ); ?>" >
 					<img src="<?php echo esc_url( $ads_image_path3 ); ?>" title="<?php echo esc_attr( $title3 ); ?>" alt="<?php echo esc_attr( $alt3 ); ?>">
 				</a>
 			</div>
 			<div class="delta-site-bpa-box">
-				<a href="<?php echo esc_url( $ads_link4 ); ?>" rel="<?php echo esc_attr( $ads_link_type4 ); ?>" target="<?php echo esc_attr( $ads_target4 ); ?>" >
+				<a href="<?php echo esc_url( $ads_link4 ); ?>" target="<?php echo esc_attr( $ads_target4 ); ?>" >
 					<img src="<?php echo esc_url( $ads_image_path4 ); ?>" title="<?php echo esc_attr( $title4 ); ?>" alt="<?php echo esc_attr( $alt4 ); ?>">
 				</a>
 			</div>
@@ -783,25 +755,21 @@ class tierone_banner_promo_ads extends WP_Widget{
 				'alt1'					=> '',
 				'ads_image'				=> '',
 				'ads_link1'				=> '',
-				'ads_link_type1'		=> '',
 				'ads_target1'			=> '',
 				'title2'				=> '',
 				'alt2'					=> '',
 				'ads_image2'			=> '',
 				'ads_link2'				=> '',
-				'ads_link_type2'		=> '',
 				'ads_target2'			=> '',
 				'title3'				=> '',
 				'alt3'					=> '',
 				'ads_image3'			=> '',
 				'ads_link3'				=> '',
-				'ads_link_type3'		=> '',
 				'ads_target3'			=> '',
 				'title4'				=> '',
 				'alt4'					=> '',
 				'ads_image4'			=> '',
 				'ads_link4'				=> '',
-				'ads_link_type4'		=> '',
 				'ads_target4'			=> ''
 			)
 		);
@@ -822,13 +790,6 @@ class tierone_banner_promo_ads extends WP_Widget{
 						<div class="delta-admin-input-wrap">
 							<label for="<?php echo $this->get_field_id( 'ads_link1' ); ?>"><?php _e( 'Link:', 'tierone' ); ?></label>
 							<input type="text" name="<?php echo $this->get_field_name( 'ads_link1' ); ?>" id="<?php echo $this->get_field_id( 'ads_link1' ); ?>" value="<?php echo esc_attr( $instance['ads_link1'] ); ?>" >
-						</div>
-						<div class="delta-admin-input-wrap">
-							<label for="<?php echo $this->get_field_id( 'ads_link_type1' ); ?>"><?php _e( 'Link Type:','tierone' ); ?></label>
-							<select id="<?php echo $this->get_field_id( 'ads_link_type1' ); ?>" name="<?php echo $this->get_field_name( 'ads_link_type1' ); ?>">
-								<option value="nofollow" <?php selected( $instance['ads_link_type1'], 'nofollow' ); ?>>No Follow</option>
-								<option value="dofollow" <?php selected( $instance['ads_link_type1'], 'dofollow' ); ?>>Do Follow</option>
-							</select>
 						</div>
 						<div class="delta-admin-input-wrap">
 							<label for="<?php echo $this->get_field_id('ads_target1'); ?>"><?php _e( 'Link Target:','tierone' ); ?></label>
@@ -868,13 +829,6 @@ class tierone_banner_promo_ads extends WP_Widget{
 							<input type="text" name="<?php echo $this->get_field_name( 'ads_link2' ); ?>" id="<?php echo $this->get_field_id( 'ads_link2' ); ?>" value="<?php echo esc_attr( $instance['ads_link2'] ); ?>" >
 						</div>
 						<div class="delta-admin-input-wrap">
-							<label for="<?php echo $this->get_field_id( 'ads_link_type2' ); ?>"><?php _e( 'Link Type:','tierone' ); ?></label>
-							<select id="<?php echo $this->get_field_id( 'ads_link_type2' ); ?>" name="<?php echo $this->get_field_name( 'ads_link_type2' ); ?>">
-								<option value="nofollow" <?php selected( $instance['ads_link_type2'], 'nofollow' ); ?>>No Follow</option>
-								<option value="dofollow" <?php selected( $instance['ads_link_type2'], 'dofollow' ); ?>>Do Follow</option>
-							</select>
-						</div>
-						<div class="delta-admin-input-wrap">
 							<label for="<?php echo $this->get_field_id('ads_target2'); ?>"><?php _e( 'Link Target :','tierone' ); ?></label>
 							<select id="<?php echo $this->get_field_id('ads_target2'); ?>" name="<?php echo $this->get_field_name('ads_target2'); ?>">
 								<option value="_blank" <?php selected( $instance['ads_target2'], '_blank' ); ?>>_blank</option>
@@ -912,13 +866,6 @@ class tierone_banner_promo_ads extends WP_Widget{
 							<input type="text" name="<?php echo $this->get_field_name( 'ads_link3' ); ?>" id="<?php echo $this->get_field_id( 'ads_link3' ); ?>" value="<?php echo esc_attr( $instance['ads_link3'] ); ?>" >
 						</div>
 						<div class="delta-admin-input-wrap">
-							<label for="<?php echo $this->get_field_id( 'ads_link_type3' ); ?>"><?php _e( 'Link Type:','tierone' ); ?></label>
-							<select id="<?php echo $this->get_field_id( 'ads_link_type3' ); ?>" name="<?php echo $this->get_field_name( 'ads_link_type3' ); ?>">
-								<option value="nofollow" <?php selected( $instance['ads_link_type3'], 'nofollow' ); ?>>No Follow</option>
-								<option value="dofollow" <?php selected( $instance['ads_link_type3'], 'dofollow' ); ?>>Do Follow</option>
-							</select>
-						</div>
-						<div class="delta-admin-input-wrap">
 							<label for="<?php echo $this->get_field_id('ads_target3'); ?>"><?php _e( 'Link Target 1 :','tierone' ); ?></label>
 							<select id="<?php echo $this->get_field_id('ads_target3'); ?>" name="<?php echo $this->get_field_name('ads_target3'); ?>">
 								<option value="_blank" <?php selected( $instance['ads_target3'], '_blank' ); ?>>_blank</option>
@@ -954,13 +901,6 @@ class tierone_banner_promo_ads extends WP_Widget{
 						<div class="delta-admin-input-wrap">
 							<label for="<?php echo $this->get_field_id( 'ads_link4' ); ?>"><?php _e( 'Link:', 'tierone' ); ?></label>
 							<input type="text" name="<?php echo $this->get_field_name( 'ads_link4' ); ?>" id="<?php echo $this->get_field_id( 'ads_link4' ); ?>" value="<?php echo esc_attr( $instance['ads_link4'] ); ?>" >
-						</div>
-						<div class="delta-admin-input-wrap">
-							<label for="<?php echo $this->get_field_id( 'ads_link_type4' ); ?>"><?php _e( 'Link Type:','tierone' ); ?></label>
-							<select id="<?php echo $this->get_field_id( 'ads_link_type4' ); ?>" name="<?php echo $this->get_field_name( 'ads_link_type4' ); ?>">
-								<option value="nofollow" <?php selected( $instance['ads_link_type4'], 'nofollow' ); ?>>No Follow</option>
-								<option value="dofollow" <?php selected( $instance['ads_link_type4'], 'dofollow' ); ?>>Do Follow</option>
-							</select>
 						</div>
 						<div class="delta-admin-input-wrap">
 							<label for="<?php echo $this->get_field_id('ads_target4'); ?>"><?php _e( 'Link Target:','tierone' ); ?></label>
@@ -1010,27 +950,23 @@ class tierone_banner_promo_ads extends WP_Widget{
         $instance['title1']      		= strip_tags( stripslashes( $new_instance['title1'] ) );
         $instance['alt1']      			= strip_tags( stripslashes( $new_instance['alt1'] ) );
         $instance['ads_link1']   		= strip_tags( stripslashes( $new_instance['ads_link1'] ) );
-        $instance['ads_link_type1']  	= strip_tags( $new_instance['ads_link_type1'] );
         $instance['ads_target1']  		= strip_tags( $new_instance['ads_target1'] );
         $instance['ads_image']  		= strip_tags( $new_instance['ads_image'] );
         /*2*/
         $instance['title2']      		= strip_tags( stripslashes( $new_instance['title2'] ) );
         $instance['alt2']      			= strip_tags( stripslashes( $new_instance['alt2'] ) );
         $instance['ads_link2']   		= strip_tags( stripslashes( $new_instance['ads_link2'] ) );
-        $instance['ads_link_type2']  	= strip_tags( $new_instance['ads_link_type2'] );
         $instance['ads_target2']  		= strip_tags( $new_instance['ads_target2'] );
         $instance['ads_image2']  		= strip_tags( $new_instance['ads_image2'] );
         /*3*/
         $instance['title3']      		= strip_tags( stripslashes( $new_instance['title3'] ) );
         $instance['alt3']      			= strip_tags( stripslashes( $new_instance['alt3'] ) );
         $instance['ads_link3']   		= strip_tags( stripslashes( $new_instance['ads_link3'] ) );
-        $instance['ads_link_type3']  	= strip_tags( $new_instance['ads_link_type3'] );
         $instance['ads_target3']  		= strip_tags( $new_instance['ads_target3'] );
         $instance['ads_image3']  		= strip_tags( $new_instance['ads_image3'] );
         /*4*/
         $instance['title4']      		= strip_tags( stripslashes( $new_instance['title4'] ) );
         $instance['alt4']      			= strip_tags( stripslashes( $new_instance['alt4'] ) );
-        $instance['ads_link4']   		= strip_tags( stripslashes( $new_instance['ads_link4'] ) );
         $instance['ads_link_type4']  	= strip_tags( $new_instance['ads_link_type4'] );
         $instance['ads_target4']  		= strip_tags( $new_instance['ads_target4'] );
         $instance['ads_image4']  		= strip_tags( $new_instance['ads_image4'] );
@@ -1854,6 +1790,7 @@ class tierone_tabbed_widget extends WP_Widget{
 						$comment_length = 90;
 						$args = array(
 							'number'       => $noc,
+							'status'       => 'approve'
 						);
 						$comments_query = new WP_Comment_Query;
 						$comments = $comments_query->query( $args );	
